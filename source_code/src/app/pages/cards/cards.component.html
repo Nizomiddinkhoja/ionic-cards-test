@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start" expand="full">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Карточки</ion-title>
+
+      <ion-buttons slot="end" expand="full">
+        <ion-button (click)="addCard()">
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="row">
+    <div class="col-12 col-sm-4" *ngFor="let card of data">
+      <app-card [card]="card" (deleteEvent)="deleteCardEvent($event)"></app-card>
+    </div>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
+

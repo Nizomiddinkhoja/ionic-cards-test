@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" expand="full">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ card.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Введите данные" [(ngModel)]="value" (keydown.enter)="saveInput()"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="saveInput()">Сохранить</ion-button>
+</ion-content>

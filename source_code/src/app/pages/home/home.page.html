@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+  <h1 class="ion-padding">Разделы</h1>
+  <ion-list>
+    <ion-item button detail="true" [routerLink]="'/cards'">
+      <ion-label>Карточки</ion-label>
+    </ion-item>
+    <ion-item button detail="true" [routerLink]="'/todos'">
+      <ion-label>ToDo</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-container *ngIf="lastResult">
+    <h1 class="ion-padding">Последний введеный результат</h1>
+    <p class="ion-padding">{{ lastResult }}</p>
+  </ng-container>
+</ion-content>

@@ -1,0 +1,12 @@
+<ion-card (click)="openCardDetail(card)">
+  <ion-icon class="delete-btn" name="trash" (click)="delete($event, card)"></ion-icon>
+
+  <img loading="lazy" alt="test image" [src]="card.image"/>
+  <ion-card-header>
+    <ion-card-title>{{card.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{card.text}}
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" expand="full">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ToDo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="todoData">
+    <ion-item>
+      <p>ID: {{todoData.id}}</p>
+    </ion-item>
+    <ion-item>
+      <p>ID пользователя: {{todoData.userId}}</p>
+    </ion-item>
+    <ion-item>
+      <p>Название: {{todoData.title}}</p>
+    </ion-item>
+    <ion-item>
+      <p>Статус: {{todoData.completed ? 'Завершен': 'В процессе'}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+  <p *ngIf="!isLoading && !todoData">Нет данных</p>
+</ion-content>

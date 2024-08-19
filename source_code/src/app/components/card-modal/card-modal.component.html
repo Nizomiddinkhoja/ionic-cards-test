@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" expand="full">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Добавить карточку</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Заголовок</ion-label>
+    <ion-input [(ngModel)]="card.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Текст</ion-label>
+    <ion-input [(ngModel)]="card.text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Ссылка на картинку</ion-label>
+    <ion-input [(ngModel)]="card.image"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="save()">Сохранить</ion-button>
+</ion-content>
